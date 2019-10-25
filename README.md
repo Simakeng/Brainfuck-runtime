@@ -3,9 +3,10 @@
 An implementation of Brainfuck runtime written by C++.
 
 
-![example](https://imgchr.com/i/KwIs91)
+![example](/img/example.png)
 
-![debug](https://imgchr.com/i/KwI6c6)
+
+![debug](/img/debug.png)
 
 ## Brainfuck Commands
 The eight language commands each consist of a single character:
