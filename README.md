@@ -1,6 +1,6 @@
 # Brainfuck-Runtime
 
-An implementation of Brainfuck runtime written by C++.
+An implementation of Brainfuck runtime written with C++.
 
 
 ![example](/img/example.png)
