@@ -65,12 +65,23 @@ public:
 		}
 	}
 };
+//void printBuf(std::deque<char> buf, BrainFuck& fuck)
+//{
+//	printf("¡¾DBG¡¿");
+//	for (auto ch : buf) 
+//		putchar(ch);
+//	putchar('\n');
+//	fuck.dispRam();
+//}
 void fuckit(std::deque<char> cmdbuf, BrainFuck& fuck)
 {
+	//printBuf(cmdbuf, fuck);
 	auto ps = cmdbuf.begin();
 	if (*ps == '[')
 		if (fuck.test())
 			return;
+		else
+			++ps;
 	while (ps != cmdbuf.end())
 	{
 		switch (*ps)
@@ -107,8 +118,7 @@ void fuckit(std::deque<char> cmdbuf, BrainFuck& fuck)
 				ps++;
 			} while (um != 0);
 			auto subbuf = std::deque<char>();
-			subbuf.insert(subbuf.end(), start, ps);
-			ps = cmdbuf.erase(start, ps);
+			subbuf.insert(subbuf.end(), start, ps); 
 			fuckit(subbuf, fuck);
 		}
 		default:
